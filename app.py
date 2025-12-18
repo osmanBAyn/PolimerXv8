@@ -40,7 +40,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 @st.cache_resource
 def load_my_trained_model():
 # Buraya az önce oluşturduğun Hugging Face modelinin adını yaz
-    model_path = "OsBaran/POLSEN_T5_Model-T5-Model"
+    model_path = "OsBaran/POLISEN_T5_Model"
     try:
         tokenizer = AutoTokenizer.from_pretrained(model_path)
         model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
@@ -2260,3 +2260,4 @@ if models:
                     # Session State'e kaydet (PDF raporu için)
 
                     st.session_state['retro_manual_text'] = f"AI Tahmini: {prediction}"
+
