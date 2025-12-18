@@ -18,3 +18,4 @@ requests
 datasets
 xgboost
 lightgbm
+ipython_genutils
