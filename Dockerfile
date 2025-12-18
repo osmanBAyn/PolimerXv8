@@ -1,30 +1,30 @@
-# 1. Temel Sistem: Python 3.10 yüklü hafif Linux
+# 1. Temel Sistem
 FROM python:3.10-slim
 
-# 2. RDKit ve Grafik İşlemleri için Gerekli Linux Kütüphanelerini Yükle
-# (Hugging Face'te aldığın hatayı çözen kısım burasıdır)
+# 2. Linux Kütüphanelerini Yükle
+# DÜZELTME: 'libgl1-mesa-glx' yerine 'libgl1' yazdık.
 RUN apt-get update && apt-get install -y \
     build-essential \
     libxrender1 \
     libxext6 \
     libsm6 \
     libx11-dev \
-    libgl1-mesa-glx \
+    libgl1 \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# 3. Sunucuda 'app' diye bir klasör aç ve içine gir
+# 3. Çalışma Klasörü
 WORKDIR /app
 
-# 4. Kütüphane listesini kopyala ve yükle
+# 4. Kütüphaneleri Yükle
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Senin bilgisayarındaki TÜM dosyaları sunucuya kopyala
+# 5. Dosyaları Kopyala
 COPY . .
 
-# 6. Streamlit'in portunu (kapısını) aç
+# 6. Portu Aç
 EXPOSE 8501
 
-# 7. Uygulamayı başlat
+# 7. Başlat
 CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
