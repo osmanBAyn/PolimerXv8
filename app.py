@@ -36,7 +36,15 @@ import matplotlib.pyplot as plt
 # --- YEREL RETROSENTEZ MODELİ ENTEGRASYONU ---
 
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import streamlit as st
 
+# --- BU SATIRI EN TEPEYE EKLE ---
+st.set_page_config(
+    page_title="POLSEN",    # Tarayıcı sekmesinde yazacak isim
+    page_icon="🧬",           # Yanındaki ikon (Emoji veya dosya yolu olabilir)
+    layout="wide"             # Sayfayı geniş moda alır (İsteğe bağlı, şık durur)
+)
+# --------------------------------
 # --- MODELİ ÖNBELLEĞE AL (Sadece 1 kere yüklenir) ---
 @st.cache_resource
 def load_my_trained_model():
@@ -889,13 +897,13 @@ def run_single_objective_flow(models, generations, targets, active_props, initia
     # Grafikler için yan yana iki kolon (Canlı güncellenecek)
     col_chart1, col_chart2 = st.columns(2)
     with col_chart1:
-        st.caption("📉 Yakınsama (Convergence)")
+        st.caption("Yakınsama (Convergence)")
         chart_fitness_placeholder = st.empty()
     with col_chart2:
-        st.caption("🌊 Popülasyon Çeşitliliği (Diversity)")
+        st.caption("Popülasyon Çeşitliliği (Diversity)")
         chart_diversity_placeholder = st.empty()
 
-    log_expander = st.expander("📝 GA Logları (Detay)", expanded=False)
+    log_expander = st.expander("GA Logları (Detaylı)", expanded=False)
     with log_expander:
         log_placeholder = st.empty()
         mutation_placeholder = st.empty()
@@ -1631,7 +1639,7 @@ def calculate_novelty_optimized(generated_smiles, ref_smiles_list):
 
 # st.title("...") yerine:
 
-st.markdown('<h1 class="main-title">🧬 PolimerX <br><span style="font-size:1.5rem; color:#666; font-weight:400;">Yapay Zeka Destekli Materyal Keşfi</span></h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title"> POLSEN <br><span style="font-size:1.5rem; color:#666; font-weight:400;">Yapay Zeka Destekli Polimer Tasarlayıcısı</span></h1>', unsafe_allow_html=True)
 
 models = load_critic_models()
 ALL_PROPS = list(models.keys()) # Yüklenen modellerin anahtarları: ['Tg', 'Td', 'EPS']
@@ -1680,7 +1688,7 @@ def add_synced_input(prop_key, label, min_val, max_val, default, step, is_int=Fa
     return st.session_state[s_key]
 
 if models:
-    st.sidebar.header("⚙️ Hedef Seçimi")
+    st.sidebar.header("Hedef Seçimi")
     
     # 1. Optimizasyona Dahil Edilecek Özelliklerin Seçimi
     active_props = []
@@ -1782,8 +1790,8 @@ if models:
     initial_selfies, reference_smiles = get_initial_population()
     # Sidebar'ın en altına ekleyebilirsiniz
     st.sidebar.divider()
-    st.sidebar.markdown("### 🤖 AI Asistan Ayarları")
-    api_key = st.sidebar.text_input("Google Gemini API Key", type="password", help="AI yorumu almak için https://aistudio.google.com/app/apikey adresinden ücretsiz anahtar alabilirsiniz.")
+    st.sidebar.markdown("LLM ChatBot Ayarları")
+    api_key = st.sidebar.text_input("API Key", type="password", help="AI yorumu almak için https://aistudio.google.com/app/apikey adresinden ücretsiz anahtar alabilirsiniz.")
     # --- BUTON VE HESAPLAMA KISMI ---
     if st.sidebar.button("🚀 Hedefi Ara", type="primary"):
         
@@ -1815,16 +1823,16 @@ if models:
         
         preds = best_poly_data['preds']
         
-        st.success("✅ Optimizasyon Başarıyla Tamamlandı! (Sonuçlar Hafızada)")
+        st.success("✅ Optimizasyon Başarıyla Tamamlandı!")
         
         # 4 SEKME YAPISI
-        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📊 Genel Bakış", "🧬 Yapısal Analiz", "📈 Evrim Geçmişi", "💾 Raporlama", "🤖 AI Analizi", "🧪 Retrosentez"])
+        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Genel", "Yapısal Analiz", "Evrim Geçmişi", "Raporlama", "ChatBot", "Retrosentez"])
         # --- TAB 1: ÖZET ---
         with tab1:
             col_main, col_score, col_green = st.columns([2, 1, 1])
             
             with col_main:
-                st.markdown(f"### 🏆 Toplam Hata: **{best_poly_data['total_error']:.4f}**")
+                st.markdown(f"### Toplam Hata: **{best_poly_data['total_error']:.4f}**")
                 
             with col_score:
                 sa = get_sa_score_local(best_poly_data['smiles'])
@@ -1851,7 +1859,7 @@ if models:
                 sol_val = preds['Solubility']
                 solvents, partials = get_soluble_solvents(sol_val)
                 
-                st.markdown("### 🧪 Tahmini Çözünürlük Analizi")
+                st.markdown("Tahmini Çözünürlük Analizi")
                 c1, c2 = st.columns(2)
                 
                 with c1:
@@ -1889,7 +1897,7 @@ if models:
                     </div>
                     """, unsafe_allow_html=True)
             st.divider()
-            st.subheader("🎯 Hedef Uyumluluk Analizi")
+            st.subheader("Hedef Uyumluluk Analizi")
             if len(saved_active_props) >= 3:
                     fig = create_radar_chart(preds, saved_targets, saved_active_props, ranges)
                     st.plotly_chart(fig, use_container_width=True)
@@ -1921,7 +1929,7 @@ if models:
                  st.info(f"💡 Bu molekül PubChem'de kayıtlı: **{name}** (CID: {cid})")
             st.divider()
             # --- YENİ: ÖZGÜNLÜK / NOVELTY ANALİZİ ---
-            st.subheader("🔍 Özgünlük Analizi (Novelty Search)")
+            st.subheader("Özgünlük Analizi (Novelty Search)")
             
             # reference_smiles değişkenini get_initial_population'dan almıştık
             similarity_score, similar_smi = calculate_novelty_optimized(best_poly_data['smiles'], reference_smiles)
@@ -1951,7 +1959,7 @@ if models:
         # --- TAB 3: GRAFİK ---
         # --- TAB 3: PERFORMANS ANALİZİ ---
         with tab3:
-            st.subheader("📈 Genetik Algoritma Performans Raporu")
+            st.subheader("Genetik Algoritma Performans Raporu")
             
             if 'best_fitness' in history and len(history['best_fitness']) > 0:
                 # Matplotlib ile Profesyonel Çizim
@@ -1990,127 +1998,127 @@ if models:
                 st.warning("Henüz grafik çizilecek veri yok.")
             # --- TAB 3: BENCHMARK VE PERFORMANS ---
         with tab3:
-            st.header("🏆 Performans Kıyaslama (Benchmark)")
-            st.markdown("Modelin başarısını kanıtlamak için onu 'Rastgele Arama' ile yarıştırın.")
+            # st.header("🏆 Performans Kıyaslama (Benchmark)")
+            # st.markdown("Modelin başarısını kanıtlamak için onu 'Rastgele Arama' ile yarıştırın.")
             
-            # Eğer GA sonuçları varsa
-            if 'ga_history' in st.session_state and 'best_fitness' in st.session_state['ga_history']:
-                history = st.session_state['ga_history']
-                ga_best_curve = history['best_fitness']
+            # # Eğer GA sonuçları varsa
+            # if 'ga_history' in st.session_state and 'best_fitness' in st.session_state['ga_history']:
+            #     history = st.session_state['ga_history']
+            #     ga_best_curve = history['best_fitness']
                 
-                # Benchmark Butonu
-                if st.button("🏁 Rastgele Arama ile Kıyasla (Benchmark Başlat)"):
-                    with st.spinner("Rastgele Arama yapılıyor... Bu işlem GA kadar sürebilir."):
-                        # GA'nın toplam bütçesini hesapla (Jenerasyon x 100 birey)
-                        generations_run = len(ga_best_curve)
-                        pop_size = 100 # Kodunuzda sabit 100'dü
-                        total_evals = generations_run * pop_size
+            #     # Benchmark Butonu
+            #     if st.button("🏁 Rastgele Arama ile Kıyasla (Benchmark Başlat)"):
+            #         with st.spinner("Rastgele Arama yapılıyor... Bu işlem GA kadar sürebilir."):
+            #             # GA'nın toplam bütçesini hesapla (Jenerasyon x 100 birey)
+            #             generations_run = len(ga_best_curve)
+            #             pop_size = 100 # Kodunuzda sabit 100'dü
+            #             total_evals = generations_run * pop_size
                         
-                        # Benchmark'ı çalıştır
-                        random_curve = run_random_benchmark(
-                            models, saved_targets, saved_active_props, 
-                            initial_selfies, ranges, 
-                            total_budget=total_evals, 
-                            batch_size=pop_size
-                        )
+            #             # Benchmark'ı çalıştır
+            #             random_curve = run_random_benchmark(
+            #                 models, saved_targets, saved_active_props, 
+            #                 initial_selfies, ranges, 
+            #                 total_budget=total_evals, 
+            #                 batch_size=pop_size
+            #             )
                         
-                        # Sonucu Session State'e kaydet (Sayfa yenilenince gitmesin)
-                        st.session_state['random_curve'] = random_curve
-                        st.success("Benchmark Tamamlandı!")
+            #             # Sonucu Session State'e kaydet (Sayfa yenilenince gitmesin)
+            #             st.session_state['random_curve'] = random_curve
+            #             st.success("Benchmark Tamamlandı!")
 
-                # --- GRAFİK ÇİZİMİ ---
-                fig, ax = plt.subplots(figsize=(10, 6))
+            #     # --- GRAFİK ÇİZİMİ ---
+            #     fig, ax = plt.subplots(figsize=(10, 6))
                 
-                # 1. GA Çizgisi (Yeşil)
-                ax.plot(ga_best_curve, label='Genetik Algoritma (Sizin Modeliniz)', color='green', linewidth=2.5)
+            #     # 1. GA Çizgisi (Yeşil)
+            #     ax.plot(ga_best_curve, label='Genetik Algoritma (Sizin Modeliniz)', color='green', linewidth=2.5)
                 
-                # 2. Random Search Çizgisi (Gri/Siyah) - Varsa çiz
-                if 'random_curve' in st.session_state:
-                    # Uzunlukları eşitle (Bazen 1 eksik/fazla olabilir)
-                    min_len = min(len(ga_best_curve), len(st.session_state['random_curve']))
-                    r_curve = st.session_state['random_curve'][:min_len]
-                    g_curve = ga_best_curve[:min_len]
+            #     # 2. Random Search Çizgisi (Gri/Siyah) - Varsa çiz
+            #     if 'random_curve' in st.session_state:
+            #         # Uzunlukları eşitle (Bazen 1 eksik/fazla olabilir)
+            #         min_len = min(len(ga_best_curve), len(st.session_state['random_curve']))
+            #         r_curve = st.session_state['random_curve'][:min_len]
+            #         g_curve = ga_best_curve[:min_len]
                     
-                    ax.plot(r_curve, label='Rastgele Arama (Random Search)', color='gray', linestyle='--', linewidth=2)
+            #         ax.plot(r_curve, label='Rastgele Arama (Random Search)', color='gray', linestyle='--', linewidth=2)
                     
-                    # Farkı hesapla (Son jenerasyon)
-                    diff = r_curve[-1] - g_curve[-1]
-                    st.caption(f"**Sonuç:** GA modeliniz, rastgele aramadan **{diff:.2f} puan** daha iyi performans gösterdi.")
+            #         # Farkı hesapla (Son jenerasyon)
+            #         diff = r_curve[-1] - g_curve[-1]
+            #         st.caption(f"**Sonuç:** GA modeliniz, rastgele aramadan **{diff:.2f} puan** daha iyi performans gösterdi.")
                 
-                ax.set_title("Zeka Testi: GA vs Şans", fontweight='bold')
-                ax.set_xlabel("Jenerasyon (Her adımda 100 yeni deneme)")
-                ax.set_ylabel("Hata Skoru (Düşük İyidir)")
-                ax.legend()
-                ax.grid(True, linestyle='--', alpha=0.5)
+            #     ax.set_title("Zeka Testi: GA vs Şans", fontweight='bold')
+            #     ax.set_xlabel("Jenerasyon (Her adımda 100 yeni deneme)")
+            #     ax.set_ylabel("Hata Skoru (Düşük İyidir)")
+            #     ax.legend()
+            #     ax.grid(True, linestyle='--', alpha=0.5)
                 
-                st.pyplot(fig)
+            #     st.pyplot(fig)
                 
-                st.info("""
-                **Grafik Nasıl Yorumlanır?**
-                * **Yeşil Çizgi:** Hızlıca aşağı iniyorsa, modeliniz 'öğreniyor' demektir.
-                * **Gri Çizgi:** Genelde daha yukarıda ve düz kalır.
-                * **Fark:** İki çizgi arasındaki boşluk, Yapay Zekanızın kattığı değerdir.
-                """)
+            #     st.info("""
+            #     **Grafik Nasıl Yorumlanır?**
+            #     * **Yeşil Çizgi:** Hızlıca aşağı iniyorsa, modeliniz 'öğreniyor' demektir.
+            #     * **Gri Çizgi:** Genelde daha yukarıda ve düz kalır.
+            #     * **Fark:** İki çizgi arasındaki boşluk, Yapay Zekanızın kattığı değerdir.
+            #     """)
                 
-            else:
-                st.warning("Önce 'Hedefi Ara' butonuna basarak GA'yı çalıştırın, sonra kıyaslama yapabilirsiniz.")
+            # else:
+            #     st.warning("Önce 'Hedefi Ara' butonuna basarak GA'yı çalıştırın, sonra kıyaslama yapabilirsiniz.")
             st.divider()
-            st.header("🎲 Büyük Stres Testi (Mass Random Testing)")
-            st.markdown("""
-            Modelin **genelleştirme yeteneğini** ölçmek için rastgele hedeflerle çoklu deneme yapın.
-            * Her denemede farklı özellikler ve farklı hedef değerler seçilir.
-            * Modelin "kolay" ve "zor" hedeflere tepkisi ölçülür.
-            """)
+            # st.header("🎲 Büyük Stres Testi (Mass Random Testing)")
+            # st.markdown("""
+            # Modelin **genelleştirme yeteneğini** ölçmek için rastgele hedeflerle çoklu deneme yapın.
+            # * Her denemede farklı özellikler ve farklı hedef değerler seçilir.
+            # * Modelin "kolay" ve "zor" hedeflere tepkisi ölçülür.
+            # """)
             
-            col_mass_input, col_mass_btn = st.columns([1, 2])
-            with col_mass_input:
-                mass_trials = st.number_input("Test Sayısı", min_value=10, max_value=500, value=100, step=10)
+            # col_mass_input, col_mass_btn = st.columns([1, 2])
+            # with col_mass_input:
+            #     mass_trials = st.number_input("Test Sayısı", min_value=10, max_value=500, value=100, step=10)
             
-            if col_mass_btn.button("🔥 100+ Rastgele Testi Başlat"):
-                with st.spinner("Model zorlu bir sınava giriyor... Kahvenizi alın, bu biraz sürebilir."):
-                    df_results = run_mass_random_test(models, generations, initial_selfies, ranges, num_trials=mass_trials)
+            # if col_mass_btn.button("🔥 100+ Rastgele Testi Başlat"):
+            #     with st.spinner("Model zorlu bir sınava giriyor... Kahvenizi alın, bu biraz sürebilir."):
+            #         df_results = run_mass_random_test(models, generations, initial_selfies, ranges, num_trials=mass_trials)
                     
-                    # --- SONUÇ ANALİZİ ---
-                    st.subheader("📊 Test Sonuçları")
+            #         # --- SONUÇ ANALİZİ ---
+            #         st.subheader("📊 Test Sonuçları")
                     
-                    # 1. Özet Metrikler
-                    avg_error = df_results["Final Hata Skoru"].mean()
-                    success_count = df_results[df_results["Final Hata Skoru"] < 5.0].shape[0]
-                    success_rate = (success_count / mass_trials) * 100
+            #         # 1. Özet Metrikler
+            #         avg_error = df_results["Final Hata Skoru"].mean()
+            #         success_count = df_results[df_results["Final Hata Skoru"] < 5.0].shape[0]
+            #         success_rate = (success_count / mass_trials) * 100
                     
-                    m1, m2, m3 = st.columns(3)
-                    m1.metric("Ortalama Hata", f"{avg_error:.2f}")
-                    m2.metric("Başarı Oranı (Hata < 5.0)", f"%{success_rate:.1f}")
-                    m3.metric("En Zorlu Senaryo Hatası", f"{df_results['Final Hata Skoru'].max():.2f}")
+            #         m1, m2, m3 = st.columns(3)
+            #         m1.metric("Ortalama Hata", f"{avg_error:.2f}")
+            #         m2.metric("Başarı Oranı (Hata < 5.0)", f"%{success_rate:.1f}")
+            #         m3.metric("En Zorlu Senaryo Hatası", f"{df_results['Final Hata Skoru'].max():.2f}")
                     
-                    # 2. Histogram (Hata Dağılımı)
-                    fig_hist, ax_hist = plt.subplots(figsize=(10, 5))
-                    ax_hist.hist(df_results["Final Hata Skoru"], bins=20, color='#3498db', edgecolor='black', alpha=0.7)
-                    ax_hist.set_title("Hata Skorlarının Dağılımı (Histogram)")
-                    ax_hist.set_xlabel("Hata Skoru (Sola yığılma iyidir)")
-                    ax_hist.set_ylabel("Deneme Sayısı")
-                    ax_hist.axvline(avg_error, color='red', linestyle='dashed', linewidth=1, label=f'Ortalama: {avg_error:.2f}')
-                    ax_hist.legend()
-                    st.pyplot(fig_hist)
+            #         # 2. Histogram (Hata Dağılımı)
+            #         fig_hist, ax_hist = plt.subplots(figsize=(10, 5))
+            #         ax_hist.hist(df_results["Final Hata Skoru"], bins=20, color='#3498db', edgecolor='black', alpha=0.7)
+            #         ax_hist.set_title("Hata Skorlarının Dağılımı (Histogram)")
+            #         ax_hist.set_xlabel("Hata Skoru (Sola yığılma iyidir)")
+            #         ax_hist.set_ylabel("Deneme Sayısı")
+            #         ax_hist.axvline(avg_error, color='red', linestyle='dashed', linewidth=1, label=f'Ortalama: {avg_error:.2f}')
+            #         ax_hist.legend()
+            #         st.pyplot(fig_hist)
                     
-                    # 3. Scatter Plot (Zorluk vs Hata)
-                    # Hedef sayısı arttıkça hata artıyor mu?
-                    fig_sc, ax_sc = plt.subplots(figsize=(10, 5))
-                    ax_sc.scatter(df_results["Hedef Sayısı"], df_results["Final Hata Skoru"], alpha=0.6, c=df_results["Final Hata Skoru"], cmap='viridis')
-                    ax_sc.set_title("Hedef Sayısı vs. Başarı")
-                    ax_sc.set_xlabel("Aktif Hedef Sayısı (Zorluk)")
-                    ax_sc.set_ylabel("Hata Skoru")
-                    ax_sc.grid(True, alpha=0.3)
-                    st.pyplot(fig_sc)
+            #         # 3. Scatter Plot (Zorluk vs Hata)
+            #         # Hedef sayısı arttıkça hata artıyor mu?
+            #         fig_sc, ax_sc = plt.subplots(figsize=(10, 5))
+            #         ax_sc.scatter(df_results["Hedef Sayısı"], df_results["Final Hata Skoru"], alpha=0.6, c=df_results["Final Hata Skoru"], cmap='viridis')
+            #         ax_sc.set_title("Hedef Sayısı vs. Başarı")
+            #         ax_sc.set_xlabel("Aktif Hedef Sayısı (Zorluk)")
+            #         ax_sc.set_ylabel("Hata Skoru")
+            #         ax_sc.grid(True, alpha=0.3)
+            #         st.pyplot(fig_sc)
                     
-                    # 4. Detaylı Tablo
-                    with st.expander("📄 Tüm Test Verilerini Gör"):
-                        st.dataframe(df_results)
+            #         # 4. Detaylı Tablo
+            #         with st.expander("📄 Tüm Test Verilerini Gör"):
+            #             st.dataframe(df_results)
 
         # --- TAB 4: İNDİRME ---
 # --- TAB 4: RAPORLAMA ve İNDİRME ---
         with tab4:
-            st.header("💾 Raporlama Merkezi")
+            st.header("💾 Raporlama")
             st.markdown("Proje verilerini CSV veya detaylı PDF raporu olarak dışa aktarabilirsiniz.")
             
             c1, c2 = st.columns(2)
@@ -2128,7 +2136,7 @@ if models:
 
             with c1:
                 st.download_button(
-                    label="📊 Veri Setini İndir (.csv)",
+                    label="Veri Setini İndir (.csv)",
                     data=csv_best,
                     file_name="polimer_data.csv",
                     mime="text/csv"
@@ -2137,7 +2145,7 @@ if models:
             st.divider()
             
             # --- PDF RAPOR OLUŞTURMA KISMI (Yeni Yeri) ---
-            st.subheader("📄 Kapsamlı PDF Raporu")
+            st.subheader("PDF Raporu")
             st.info("Bu rapor; tüm tahminleri, molekül yapısını, AI yorumlarını ve varsa sentez planını içerir.")
 
             # Verileri Session State'ten Topla
@@ -2152,7 +2160,7 @@ if models:
             
             full_retro_info = manual_retro + "\n\n--- AI Sentez Notlari ---\n" + ai_retro
 
-            if st.button("🚀 PDF Raporu Oluştur", type="primary", use_container_width=True):
+            if st.button("PDF Raporu Oluştur", type="primary", use_container_width=True):
                 with st.spinner("Rapor derleniyor..."):
                     pdf_data = create_pdf_report(
                         best_poly_data, 
@@ -2171,8 +2179,8 @@ if models:
                         use_container_width=True
                     )
         with tab5:
-            st.subheader("🧠 Yapay Zeka Uzman Görüşü")
-            
+            st.subheader("ChatBot")
+            st.markdown("Polimer yapısı ve tahmin edilen özellikler hakkında detaylı kimyasal yorum almak için AI destekli ChatBot'u kullanın.")
             if not api_key:
                 st.info("💡 Bu polimer hakkında detaylı kimyasal yorum almak için sol menüden **Google Gemini API Key** girmelisiniz.")
                 st.markdown("[👉 Ücretsiz API Key Almak İçin Tıkla](https://aistudio.google.com/app/apikey)")
@@ -2197,7 +2205,7 @@ if models:
         # --- TAB 6: RETROSENTEZ ve RAPORLAMA ---
         # --- TAB 6: RETROSENTEZ (Sadece Analiz) ---
         with tab6:
-            st.header("🧪 Retrosentez Analizi")
+            st.header("Retrosentez Analizi")
             
             target_smiles = best_poly_data['smiles']
             
@@ -2248,19 +2256,19 @@ if models:
             # --- VERİYİ KAYDET (Tab 4 için) ---
             st.session_state['retro_manual_text'] = monomer_info_text
 
-            st.divider()
+            # st.divider()
 
             # --- 2. AI SENTEZ PLANI ---
-            st.subheader("2. AI Sentez Reçetesi")
+            # st.subheader("2. AI Sentez Reçetesi")
             
-            if api_key and st.button("⚗️ Sentez Rotasını Oluştur (AI)", type="primary"):
-                ai_retro_text = get_ai_retrosynthesis_guide(api_key, target_smiles, str(retro_results))
-                st.markdown(ai_retro_text)
-                st.session_state['ai_retro_text'] = ai_retro_text
+            # if api_key and st.button("⚗️ Sentez Rotasını Oluştur (AI)", type="primary"):
+            #     ai_retro_text = get_ai_retrosynthesis_guide(api_key, target_smiles, str(retro_results))
+            #     st.markdown(ai_retro_text)
+            #     st.session_state['ai_retro_text'] = ai_retro_text
             
-            elif 'ai_retro_text' in st.session_state:
-                st.markdown(st.session_state['ai_retro_text'])
-            # --- MEVCUT TAB 6 KODUNUN DEVAMI ---
+            # elif 'ai_retro_text' in st.session_state:
+            #     st.markdown(st.session_state['ai_retro_text'])
+            # # --- MEVCUT TAB 6 KODUNUN DEVAMI ---
             
             st.divider()
 
@@ -2268,7 +2276,7 @@ if models:
             st.subheader("2. T5-Model Tahmini (Machine Learning)")
             st.caption("Eğittiğimiz model, moleküler yapıyı analiz ederek monomerleri tahmin ediyor.")
 
-            if st.button("🧠 Monomerleri Tahmin Et", type="primary"):
+            if st.button("Monomerleri Tahmin Et", type="primary"):
                 with st.spinner("Yapay zeka düşünüyor..."):
                     # Tahmin Fonksiyonunu Çağır
                     prediction = predict_monomers_local(best_poly_data['smiles'])
@@ -2278,7 +2286,7 @@ if models:
                     
                     st.markdown(f"""
                     <div style="background-color:#e8f5e9; padding:15px; border-radius:10px; border:1px solid #4CAF50;">
-                        <h4 style="color:#2e7d32; margin:0;">🧪 Önerilen Monomerler:</h4>
+                        <h4 style="color:#2e7d32; margin:0;">Önerilen Monomerler:</h4>
                         <code style="font-size:1.1em; color:#1b5e20; background-color:#e8f5e9;">{prediction}</code>
                     </div>
                     """, unsafe_allow_html=True)
@@ -2292,7 +2300,6 @@ if models:
                     # Session State'e kaydet (PDF raporu için)
 
                     st.session_state['retro_manual_text'] = f"AI Tahmini: {prediction}"
-
 
 
 
