@@ -1,0 +1,113 @@
+name,smiles,Solubility_Param
+"Polytetrafluoroethylene (PTFE)",*C(F)(F)C(F)(F)*,6.2
+"Poly(dimethylsiloxane) (PDMS)",*O[Si](C)(C)*,7.3
+"Polyethylene (PE)",*CC*,7.9
+"Polypropylene (PP)",*CC(C)*,8.2
+"Polyisobutylene (PIB)",*CC(C)(C)*,7.8
+"Polybutadiene (BR)",*CC=CC*,8.4
+"Natural Rubber (Polyisoprene)",*CC(C)=CC*,8.1
+"Polystyrene (PS)",*CC(c1ccccc1)*,9.1
+"Poly(methyl methacrylate) (PMMA)",*CC(C)(C(=O)OC)*,9.5
+"Poly(vinyl acetate) (PVAc)",*CC(OC(=O)C)*,9.4
+"Poly(vinyl chloride) (PVC)",*CC(Cl)*,9.6
+"Poly(ethylene terephthalate) (PET)",*CCOC(=O)c1ccc(cc1)C(=O)*,10.7
+"Nylon 6,6",*CCCCCC(=O)NCCCCC(=O)N*,13.6
+"Nylon 6",*CCCCCC(=O)N*,12.7
+"Poly(acrylonitrile) (PAN)",*CC(C#N)*,12.5
+"Poly(vinyl alcohol) (PVA)",*CC(O)*,12.6
+"Cellulose Acetate",*OC1C(OC(C)=O)C(OC(C)=O)C(COC(C)=O)O1*,10.9
+"Epoxy Resin (DGEBA)",*CC(O)COc1ccc(cc1)C(C)(C)c1ccc(cc1)OCC(O)*,10.9
+"Poly(vinylidene chloride) (PVDC)",*CC(Cl)(Cl)*,12.2
+"Poly(caprolactone) (PCL)",*OCCCCCC(=O)*,9.3
+"Poly(lactic acid) (PLA)",*OC(C)C(=O)*,10.1
+"Poly(ethylene oxide) (PEO)",*CCO*,9.9
+"Poly(sulfone) (PSU)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)Oc3ccc(cc3)C(C)(C)c4ccc(cc4)*,10.6
+"Poly(ether ether ketone) (PEEK)",*Oc1ccc(cc1)Oc2ccc(cc2)C(=O)c3ccc(cc3)*,10.8
+"Poly(phenylene sulfide) (PPS)",*Sc1ccc(cc1)*,10.5
+"Poly(ether sulfone) (PES)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)*,11.0
+"Polycarbonate (PC)",*Oc1ccc(cc1)C(C)(C)c2ccc(cc2)OC(=O)*,9.9
+"Poly(vinyl pyrrolidone) (PVP)",*CC(N1CCCC1=O)*,11.5
+"Poly(acrylic acid)",*CC(C(=O)O)*,11.0
+"Poly(methacrylic acid)",*CC(C)(C(=O)O)*,11.5
+"Poly(butyl acrylate)",*CC(C(=O)OCCCC)*,8.8
+"Poly(ethyl acrylate)",*CC(C(=O)OCC)*,9.2
+"Poly(4-chlorostyrene)",*CC(c1ccc(Cl)cc1)*,9.3
+"Poly(alpha-methylstyrene)",*CC(C)(c1ccccc1)*,8.9
+"Nitrocellulose",*OC1C(O[N+](=O)[O-])C(O[N+](=O)[O-])C(COC(=O)C)O1*,11.5
+"Poly(vinyl butyral)",*CC(OC1OCCCC1)*,9.8
+"Polyurethane (PU)",*OCCN*,10.0
+"Poly(vinyl fluoride) (PVF)",*CC(F)*,10.5
+"Poly(vinylidene fluoride) (PVDF)",*CC(F)(F)*,10.3
+"Poly(chlorotrifluoroethylene) (PCTFE)",*C(F)(F)C(F)(Cl)*,7.5
+"Poly(styrene-acrylonitrile) (SAN)",*CC(c1ccccc1)CC(C#N)*,9.6
+"Poly(styrene-butadiene) (SBR)",*CC(c1ccccc1)CC=CC*,8.5
+"Nylon 11",*CCCCCCCCCCC(=O)N*,10.5
+"Nylon 12",*CCCCCCCCCCCC(=O)N*,10.2
+"Poly(vinyl formal)",*CC(OC1OCCC1)*,10.5
+"Poly(oxymethylene) (POM)",*CO*,11.0
+"Poly(p-phenylene)",*c1ccccc1*,11.0
+"Poly(thiophene)",*c1ccsc1*,10.5
+"Poly(pyrrole)",*c1cc[nH]c1*,11.5
+"Kevlar",*Nc1ccc(cc1)NC(=O)c1ccc(cc1)C(=O)*,14.5
+"Nomex",*Nc1cccc(c1)NC(=O)c1cccc(c1)C(=O)*,14.0
+"PBI (Polybenzimidazole)",*Nc1cc2nc(c3ccccc3)nc2cc1*,15.5
+"Poly(methyl acrylate) (PMA)",*CC(C(=O)OC)*,10.1
+"Poly(ethyl acrylate) (PEA)",*CC(C(=O)OCC)*,9.4
+"Poly(propyl acrylate)",*CC(C(=O)OCCC)*,9.0
+"Poly(n-butyl acrylate) (PBA)",*CC(C(=O)OCCCC)*,8.8
+"Poly(isobutyl acrylate)",*CC(C(=O)OCC(C)C)*,8.6
+"Poly(sec-butyl acrylate)",*CC(C(=O)OC(C)CC)*,8.4
+"Poly(tert-butyl acrylate)",*CC(C(=O)OC(C)(C)C)*,8.2
+"Poly(hexyl acrylate)",*CC(C(=O)OCCCCCC)*,8.5
+"Poly(2-ethylhexyl acrylate)",*CC(C(=O)OCC(CC)CCCC)*,8.3
+"Poly(ethyl methacrylate) (PEMA)",*CC(C)(C(=O)OCC)*,9.1
+"Poly(propyl methacrylate)",*CC(C)(C(=O)OCCC)*,8.8
+"Poly(n-butyl methacrylate) (PBMA)",*CC(C)(C(=O)OCCCC)*,8.7
+"Poly(isobutyl methacrylate)",*CC(C)(C(=O)OCC(C)C)*,8.3
+"Poly(hexyl methacrylate)",*CC(C)(C(=O)OCCCCCC)*,8.5
+"Poly(octyl methacrylate)",*CC(C)(C(=O)OCCCCCCCC)*,8.3
+"Poly(dodecyl methacrylate)",*CC(C)(C(=O)OCCCCCCCCCCCC)*,8.1
+"Poly(octadecyl methacrylate)",*CC(C)(C(=O)OCCCCCCCCCCCCCCCCCC)*,7.9
+"Poly(vinyl propionate)",*CC(OC(=O)CC)*,9.5
+"Poly(vinyl butyrate)",*CC(OC(=O)CCC)*,9.2
+"Poly(vinyl hexanoate)",*CC(OC(=O)CCCCC)*,9.0
+"Poly(vinyl laurate)",*CC(OC(=O)CCCCCCCCCCC)*,8.3
+"Poly(vinyl stearate)",*CC(OC(=O)CCCCCCCCCCCCCCCCC)*,7.9
+"Poly(vinyl benzoate)",*CC(OC(=O)c1ccccc1)*,9.7
+"Poly(vinyl carbazole)",*CC(n1c2ccccc2c3ccccc13)*,10.4
+"Poly(acenaphthylene)",*C1C(c2cccc3cccc1c23)*,10.8
+"Poly(styrene-co-butadiene) (High Styrene)",*CC(c1ccccc1)CC=CC*,8.8
+"Poly(styrene-co-acrylonitrile) (SAN 30%)",*CC(c1ccccc1)CC(C#N)*,9.8
+"Poly(styrene-co-maleic anhydride)",*CC(c1ccccc1)C2C(=O)OC(=O)C2*,11.2
+"Poly(ethylene glycol) (PEG)",*CCO*,9.9
+"Poly(propylene oxide) (PPOx)",*CC(C)O*,8.5
+"Poly(tetramethylene oxide) (PTMO)",*CCCCO*,8.4
+"Poly(epichlorohydrin)",*OCC(Cl)*,10.9
+"Poly(vinyl methyl ether)",*CC(OC)*,9.2
+"Poly(vinyl ethyl ether)",*CC(OCC)*,8.8
+"Poly(vinyl isobutyl ether)",*CC(OCC(C)C)*,8.1
+"Poly(vinyl cyclohexane)",*CC(C1CCCCC1)*,8.0
+"Poly(4-methylstyrene)",*CC(c1ccc(C)cc1)*,8.8
+"Poly(4-tert-butylstyrene)",*CC(c1ccc(C(C)(C)C)cc1)*,8.1
+"Poly(alpha-vinylnaphthalene)",*CC(c1cccc2ccccc12)*,9.9
+"Nylon 4",*CCCC(=O)N*,13.5
+"Nylon 8",*CCCCCCCC(=O)N*,11.5
+"Nylon 9",*CCCCCCCCC(=O)N*,11.0
+"Nylon 6,9",*CCCCCC(=O)NCCCCCCCCC(=O)N*,11.2
+"Nylon 6,10",*CCCCCC(=O)NCCCCCCCCCC(=O)N*,10.8
+"Nylon 6,12",*CCCCCC(=O)NCCCCCCCCCCCC(=O)N*,10.6
+"Poly(glycolic acid) (PGA)",*OCC(=O)*,12.5
+"Poly(ethylene adipate)",*CCOC(=O)CCCCC(=O)*,9.6
+"Poly(ethylene succinate)",*CCOC(=O)CCC(=O)*,10.8
+"Poly(butylene adipate)",*CCCCOC(=O)CCCCC(=O)*,9.3
+"Poly(butylene sebacate)",*CCCCOC(=O)CCCCCCCCC(=O)*,8.9
+"Poly(caprolactam)",*CCCCCC(=O)N*,12.7
+"Poly(lauryl lactam)",*CCCCCCCCCCC(=O)N*,10.4
+"Poly(vinylidene cyanide)",*CC(C#N)(C#N)*,14.5
+"Poly(methacrylonitrile)",*CC(C)(C#N)*,11.2
+"Poly(vinyl chloride-co-vinyl acetate) (87:13)",*CC(Cl)CC(OC(=O)C)*,9.9
+"Cellulose Nitrate (12% N)",*OC1C(O[N+](=O)[O-])C(O[N+](=O)[O-])C(COC(=O)C)O1*,10.8
+"Ethyl Cellulose (DS 2.5)",*OC1C(OCC)C(OCC)C(COCC)O1*,9.3
+"Poly(dichlorophosphazene)",*N=P(Cl)(Cl)*,9.0
+"Poly(dimethoxyphosphazene)",*N=P(OC)(OC)*,10.2
+"Poly(diphenoxyphosphazene)",*N=P(Oc1ccccc1)(Oc1ccccc1)*,10.8
