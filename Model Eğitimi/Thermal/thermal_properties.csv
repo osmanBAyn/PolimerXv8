@@ -1,0 +1,218 @@
+name,smiles,Thermal_Cond,CTE
+"Polyethylene (LDPE)",*CC*,0.33,200.0
+"Polyethylene (HDPE)",*CC*,0.48,120.0
+"Polyethylene (LLDPE)",*CC*,0.40,160.0
+"Polyethylene (UHMWPE)",*CC*,0.50,110.0
+"Polypropylene (PP) Isotactic",*CC(C)*,0.12,85.0
+"Polypropylene (PP) Syndiotactic",*CC(C)*,0.15,80.0
+"Polystyrene (PS)",*CC(c1ccccc1)*,0.14,70.0
+"High Impact Polystyrene (HIPS)",*CC(c1ccccc1)CC=CC*,0.12,80.0
+"Poly(alpha-methylstyrene)",*CC(C)(c1ccccc1)*,0.13,65.0
+"Poly(methyl methacrylate) (PMMA)",*CC(C)(C(=O)OC)*,0.19,60.0
+"Poly(ethyl methacrylate)",*CC(C)(C(=O)OCC)*,0.18,70.0
+"Poly(butyl methacrylate)",*CC(C)(C(=O)OCCCC)*,0.17,80.0
+"Poly(vinyl chloride) (PVC)",*CC(Cl)*,0.16,55.0
+"Chlorinated PVC (CPVC)",*CC(Cl)C(Cl)*,0.14,45.0
+"Poly(vinylidene chloride) (PVDC)",*CC(Cl)(Cl)*,0.13,140.0
+"Polytetrafluoroethylene (PTFE)",*C(F)(F)C(F)(F)*,0.25,125.0
+"FEP",*C(F)(F)C(F)(F)C(F)(C(F)(F)F)*,0.20,135.0
+"PFA",*C(F)(F)C(F)(OC(F)(F)F)*,0.19,120.0
+"Poly(vinylidene fluoride) (PVDF)",*CC(F)(F)*,0.13,100.0
+"Poly(ethylene terephthalate) (PET)",*CCOC(=O)c1ccc(cc1)C(=O)*,0.15,65.0
+"Poly(butylene terephthalate) (PBT)",*CCOC(=O)c1ccc(cc1)C(=O)OCCCC*,0.18,70.0
+"Poly(ethylene naphthalate) (PEN)",*CCOC(=O)c1ccc2cc(C(=O)O)ccc2c1*,0.16,50.0
+"Poly(cyclohexylene dimethylene terephthalate) (PCT)",*CC1CCC(CC1)COC(=O)c2ccc(cc2)C(=O)O*,0.17,60.0
+"Polycarbonate (PC)",*Oc1ccc(cc1)C(C)(C)c2ccc(cc2)OC(=O)*,0.20,68.0
+"Nylon 6",*CCCCCC(=O)N*,0.25,80.0
+"Nylon 6,6",*CCCCCC(=O)NCCCCC(=O)N*,0.25,80.0
+"Nylon 4,6",*CCCC(=O)NCCCCC(=O)N*,0.28,75.0
+"Nylon 6,10",*CCCCCC(=O)NCCCCCCCCC(=O)N*,0.22,90.0
+"Nylon 6,12",*CCCCCC(=O)NCCCCCCCCCCC(=O)N*,0.21,95.0
+"Nylon 11",*CCCCCCCCCCC(=O)N*,0.24,90.0
+"Nylon 12",*CCCCCCCCCCCC(=O)N*,0.24,95.0
+"Poly(ether ether ketone) (PEEK)",*Oc1ccc(cc1)Oc2ccc(cc2)C(=O)c3ccc(cc3)*,0.25,47.0
+"Poly(ether ketone) (PEK)",*Oc1ccc(cc1)C(=O)c2ccc(cc2)*,0.26,50.0
+"Poly(ether ketone ketone) (PEKK)",*Oc1ccc(cc1)C(=O)c2ccc(cc2)C(=O)c3ccc(cc3)*,0.27,45.0
+"Poly(phenylene sulfide) (PPS)",*Sc1ccc(cc1)*,0.30,50.0
+"Poly(sulfone) (PSU)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)Oc3ccc(cc3)C(C)(C)c4ccc(cc4)*,0.26,55.0
+"Poly(ether sulfone) (PES)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)*,0.18,55.0
+"Polyphenylsulfone (PPSU)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)c3ccc(cc3)*,0.27,53.0
+"Poly(ether imide) (Ultem)",*N1C(=O)c2ccc(Oc3ccc(cc3)C(C)(C)c3ccc(Oc4ccc(cc4)N5C(=O)c6ccc(cc6)C5=O)cc3)cc2C1=O*,0.22,56.0
+"Poly(imide) (Kapton)",*N1C(=O)c2cc3C(=O)N(c4ccc(Oc5ccc(cc5)O4)cc4)C(=O)c3cc2C1=O*,0.12,20.0
+"Poly(amide-imide) (Torlon)",*N1C(=O)c2cc(C(=O)O)ccc2C1=O*,0.26,30.0
+"Liquid Crystal Polymer (Vectra)",*Oc1ccc(cc1)C(=O)Oc2ccc(cc2)C(=O)*,0.45,5.0
+"Poly(phenylene oxide) (PPO)",*Oc1c(C)cc(cc1C)*,0.22,52.0
+"Poly(oxymethylene) (POM)",*CO*,0.31,100.0
+"Epoxy Resin (DGEBA)",*CC(O)COc1ccc(cc1)C(C)(C)c1ccc(cc1)OCC(O)*,0.20,55.0
+"Epoxy Resin (Novolac)",*Oc1ccccc1Cc2cccc(O)c2*,0.22,50.0
+"Phenolic Resin",*Cc1c(O)cccc1*,0.20,30.0
+"Poly(dimethylsiloxane) (PDMS)",*O[Si](C)(C)*,0.15,300.0
+"Poly(phenyl methyl siloxane)",*O[Si](C)(c1ccccc1)*,0.18,250.0
+"Polyurethane (Rigid)",*OCCN*,0.04,60.0
+"Polyurethane (Elastomer)",*OCCN*,0.20,150.0
+"Thermoplastic Polyurethane (TPU)",*OCCCCN*,0.19,130.0
+"ABS",*CC(C#N)CC=CCCC(c1ccccc1)*,0.18,90.0
+"Poly(acrylonitrile) (PAN)",*CC(C#N)*,0.20,60.0
+"Polybenzimidazole (PBI)",*Nc1cc2nc(c3ccccc3)nc2cc1*,0.40,23.0
+"Poly(vinyl alcohol) (PVA)",*CC(O)*,0.20,70.0
+"Poly(vinyl acetate) (PVAc)",*CC(OC(=O)C)*,0.16,110.0
+"Cellulose Acetate",*OC1C(OC(C)=O)C(OC(C)=O)C(COC(C)=O)O1*,0.20,100.0
+"Cellulose Nitrate",*OC1C(O[N+](=O)[O-])C(O[N+](=O)[O-])C(CO[N+](=O)[O-])O1*,0.23,90.0
+"Poly(caprolactone) (PCL)",*OCCCCCC(=O)*,0.14,140.0
+"Poly(lactic acid) (PLA)",*OC(C)C(=O)*,0.13,85.0
+"Poly(glycolic acid) (PGA)",*OCC(=O)*,0.15,70.0
+"Poly(3-hydroxybutyrate) (PHB)",*OC(C)CC(=O)*,0.16,100.0
+"Poly(p-phenylene)",*c1ccccc1*,0.40,15.0
+"Poly(thiophene)",*c1ccsc1*,0.30,40.0
+"Polypyrrole",*c1cc[nH]c1*,0.25,45.0
+"Polyaniline",*Nc1ccccc1*,0.20,50.0
+"Kevlar",*Nc1ccc(cc1)NC(=O)c1ccc(cc1)C(=O)*,0.04,5.0
+"Nomex",*Nc1cccc(c1)NC(=O)c1cccc(c1)C(=O)*,0.05,15.0
+"Poly(ethylene glycol) (PEG)",*CCO*,0.20,130.0
+"Poly(propylene glycol) (PPG)",*CC(C)O*,0.18,140.0
+"Polyisoprene (Natural Rubber)",*CC(C)=CC*,0.14,220.0
+"Polybutadiene",*CC=CC*,0.15,200.0
+"Polychloroprene (Neoprene)",*CC(Cl)=CC*,0.18,180.0
+"Poly(isobutylene) (Butyl Rubber)",*CC(C)(C)C*,0.12,150.0
+name,smiles,Thermal_Cond,CTE
+"Polyethylene (LDPE)",*CC*,0.33,200.0
+"Polyethylene (HDPE)",*CC*,0.48,120.0
+"Polyethylene (LLDPE)",*CC*,0.40,160.0
+"Polyethylene (UHMWPE)",*CC*,0.50,110.0
+"Polypropylene (PP) Isotactic",*CC(C)*,0.12,85.0
+"Polypropylene (PP) Syndiotactic",*CC(C)*,0.15,80.0
+"Polypropylene (PP) Atactic",*CC(C)*,0.10,95.0
+"Poly(1-butene) Isotactic",*CC(CC)*,0.16,130.0
+"Poly(1-pentene)",*CC(CCC)*,0.14,140.0
+"Poly(1-hexene)",*CC(CCCC)*,0.13,150.0
+"Poly(4-methyl-1-pentene)",*CC(CC(C)C)*,0.17,100.0
+"Polystyrene (PS)",*CC(c1ccccc1)*,0.14,70.0
+"High Impact Polystyrene (HIPS)",*CC(c1ccccc1)CC=CC*,0.12,80.0
+"Poly(alpha-methylstyrene)",*CC(C)(c1ccccc1)*,0.13,65.0
+"Poly(4-methylstyrene)",*CC(c1ccc(C)cc1)*,0.15,75.0
+"Poly(4-methoxystyrene)",*CC(c1ccc(OC)cc1)*,0.14,72.0
+"Poly(4-chlorostyrene)",*CC(c1ccc(Cl)cc1)*,0.12,68.0
+"Poly(methyl methacrylate) (PMMA)",*CC(C)(C(=O)OC)*,0.19,60.0
+"Poly(ethyl methacrylate)",*CC(C)(C(=O)OCC)*,0.18,70.0
+"Poly(propyl methacrylate)",*CC(C)(C(=O)OCCC)*,0.17,85.0
+"Poly(butyl methacrylate)",*CC(C)(C(=O)OCCCC)*,0.17,90.0
+"Poly(isobutyl methacrylate)",*CC(C)(C(=O)OCC(C)C)*,0.16,88.0
+"Poly(hexyl methacrylate)",*CC(C)(C(=O)OCCCCCC)*,0.15,100.0
+"Poly(lauryl methacrylate)",*CC(C)(C(=O)OCCCCCCCCCCCC)*,0.14,150.0
+"Poly(methyl acrylate)",*CC(C(=O)OC)*,0.20,70.0
+"Poly(ethyl acrylate)",*CC(C(=O)OCC)*,0.19,90.0
+"Poly(butyl acrylate)",*CC(C(=O)OCCCC)*,0.17,120.0
+"Poly(2-ethylhexyl acrylate)",*CC(C(=O)OCC(CC)CCCC)*,0.15,140.0
+"Poly(vinyl chloride) (PVC)",*CC(Cl)*,0.16,55.0
+"Chlorinated PVC (CPVC)",*CC(Cl)C(Cl)*,0.14,45.0
+"Poly(vinylidene chloride) (PVDC)",*CC(Cl)(Cl)*,0.13,140.0
+"Poly(vinyl fluoride) (PVF)",*CC(F)*,0.20,110.0
+"Polytetrafluoroethylene (PTFE)",*C(F)(F)C(F)(F)*,0.25,125.0
+"FEP",*C(F)(F)C(F)(F)C(F)(C(F)(F)F)*,0.20,135.0
+"PFA",*C(F)(F)C(F)(OC(F)(F)F)*,0.19,120.0
+"Poly(vinylidene fluoride) (PVDF)",*CC(F)(F)*,0.13,100.0
+"PCTFE",*C(F)(F)C(F)(Cl)*,0.18,70.0
+"ETFE",*CC(F)(F)*,0.24,90.0
+"Poly(ethylene terephthalate) (PET)",*CCOC(=O)c1ccc(cc1)C(=O)*,0.15,65.0
+"Poly(butylene terephthalate) (PBT)",*CCOC(=O)c1ccc(cc1)C(=O)OCCCC*,0.18,70.0
+"Poly(trimethylene terephthalate) (PTT)",*CCOC(=O)c1ccc(cc1)C(=O)OCCC*,0.16,68.0
+"Poly(ethylene naphthalate) (PEN)",*CCOC(=O)c1ccc2cc(C(=O)O)ccc2c1*,0.16,50.0
+"Poly(cyclohexylene dimethylene terephthalate) (PCT)",*CC1CCC(CC1)COC(=O)c2ccc(cc2)C(=O)O*,0.17,60.0
+"Polycarbonate (PC)",*Oc1ccc(cc1)C(C)(C)c2ccc(cc2)OC(=O)*,0.20,68.0
+"Polycarbonate (TMBPA)",*Oc1cc(C)c(cc1C)C(C)(C)c2cc(C)c(O)c(C)c2OC(=O)*,0.18,60.0
+"Nylon 6",*CCCCCC(=O)N*,0.25,80.0
+"Nylon 6,6",*CCCCCC(=O)NCCCCC(=O)N*,0.25,80.0
+"Nylon 4,6",*CCCC(=O)NCCCCC(=O)N*,0.28,75.0
+"Nylon 6,9",*CCCCCC(=O)NCCCCCCCC(=O)N*,0.23,85.0
+"Nylon 6,10",*CCCCCC(=O)NCCCCCCCCC(=O)N*,0.22,90.0
+"Nylon 6,12",*CCCCCC(=O)NCCCCCCCCCCC(=O)N*,0.21,95.0
+"Nylon 11",*CCCCCCCCCCC(=O)N*,0.24,90.0
+"Nylon 12",*CCCCCCCCCCCC(=O)N*,0.24,95.0
+"Nylon MXD6",*C(=O)CCCC(=O)NCc1cccc(c1)CN*,0.26,70.0
+"Poly(ether ether ketone) (PEEK)",*Oc1ccc(cc1)Oc2ccc(cc2)C(=O)c3ccc(cc3)*,0.25,47.0
+"Poly(ether ketone) (PEK)",*Oc1ccc(cc1)C(=O)c2ccc(cc2)*,0.26,50.0
+"Poly(ether ketone ketone) (PEKK)",*Oc1ccc(cc1)C(=O)c2ccc(cc2)C(=O)c3ccc(cc3)*,0.27,45.0
+"Poly(ether ketone ether ketone ketone) (PEKEKK)",*Oc1ccc(cc1)Oc2ccc(cc2)C(=O)c3ccc(cc3)Oc4ccc(cc4)C(=O)c5ccc(cc5)C(=O)*,0.26,48.0
+"Poly(phenylene sulfide) (PPS)",*Sc1ccc(cc1)*,0.30,50.0
+"Poly(sulfone) (PSU)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)Oc3ccc(cc3)C(C)(C)c4ccc(cc4)*,0.26,55.0
+"Poly(ether sulfone) (PES)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)*,0.18,55.0
+"Polyphenylsulfone (PPSU)",*Oc1ccc(cc1)S(=O)(=O)c2ccc(cc2)c3ccc(cc3)*,0.27,53.0
+"Poly(ether imide) (Ultem)",*N1C(=O)c2ccc(Oc3ccc(cc3)C(C)(C)c3ccc(Oc4ccc(cc4)N5C(=O)c6ccc(cc6)C5=O)cc3)cc2C1=O*,0.22,56.0
+"Poly(imide) (Kapton)",*N1C(=O)c2cc3C(=O)N(c4ccc(Oc5ccc(cc5)O4)cc4)C(=O)c3cc2C1=O*,0.12,20.0
+"Poly(imide) (Upilex)",*N1C(=O)c2cc(C(=O)N(c3ccc(c4ccc(N)cc4)cc3)C(=O)c3cc2C1=O)cc2*,0.15,25.0
+"Poly(amide-imide) (Torlon)",*N1C(=O)c2cc(C(=O)O)ccc2C1=O*,0.26,30.0
+"Liquid Crystal Polymer (Vectra)",*Oc1ccc(cc1)C(=O)Oc2ccc(cc2)C(=O)*,0.45,5.0
+"Poly(phenylene oxide) (PPO)",*Oc1c(C)cc(cc1C)*,0.22,52.0
+"Poly(2,6-diphenyl-1,4-phenylene oxide)",*Oc1c(c2ccccc2)cc(cc1c3ccccc3)*,0.20,60.0
+"Poly(oxymethylene) (POM)",*CO*,0.31,100.0
+"Poly(dioxolane)",*COCCO*,0.25,110.0
+"Epoxy Resin (DGEBA)",*CC(O)COc1ccc(cc1)C(C)(C)c1ccc(cc1)OCC(O)*,0.20,55.0
+"Epoxy Resin (Novolac)",*Oc1ccccc1Cc2cccc(O)c2*,0.22,50.0
+"Epoxy Resin (TGDDM)",*CN(C)c1ccc(cc1)Cc2ccc(cc2)N(C)C*,0.21,45.0
+"Phenolic Resin",*Cc1c(O)cccc1*,0.20,30.0
+"Poly(dimethylsiloxane) (PDMS)",*O[Si](C)(C)*,0.15,300.0
+"Poly(phenyl methyl siloxane)",*O[Si](C)(c1ccccc1)*,0.18,250.0
+"Poly(diphenyl siloxane)",*O[Si](c1ccccc1)(c1ccccc1)*,0.16,220.0
+"Polyurethane (Rigid)",*OCCN*,0.04,60.0
+"Polyurethane (Elastomer)",*OCCN*,0.20,150.0
+"Thermoplastic Polyurethane (TPU)",*OCCCCN*,0.19,130.0
+"ABS",*CC(C#N)CC=CCCC(c1ccccc1)*,0.18,90.0
+"SAN",*CC(C#N)CC(c1ccccc1)*,0.17,85.0
+"Poly(acrylonitrile) (PAN)",*CC(C#N)*,0.20,60.0
+"Poly(methacrylonitrile)",*CC(C)(C#N)*,0.18,70.0
+"Polybenzimidazole (PBI)",*Nc1cc2nc(c3ccccc3)nc2cc1*,0.40,23.0
+"Poly(vinyl alcohol) (PVA)",*CC(O)*,0.20,70.0
+"Poly(vinyl acetate) (PVAc)",*CC(OC(=O)C)*,0.16,110.0
+"Poly(vinyl propionate)",*CC(OC(=O)CC)*,0.15,120.0
+"Poly(vinyl butyral) (PVB)",*CC(OC1CCC(C)O1)*,0.20,90.0
+"Poly(vinyl pyrrolidone) (PVP)",*CC(N1CCCC1=O)*,0.20,80.0
+"Poly(N-vinylcarbazole)",*CC(N1c2ccccc2c3ccccc13)*,0.15,55.0
+"Cellulose Acetate",*OC1C(OC(C)=O)C(OC(C)=O)C(COC(C)=O)O1*,0.20,100.0
+"Cellulose Propionate",*OC1C(OC(=O)CC)C(OC(=O)CC)C(COC(=O)CC)O1*,0.19,110.0
+"Cellulose Nitrate",*OC1C(O[N+](=O)[O-])C(O[N+](=O)[O-])C(CO[N+](=O)[O-])O1*,0.23,90.0
+"Ethyl Cellulose",*OC1C(OCC)C(OCC)C(COCC)O1*,0.21,115.0
+"Poly(caprolactone) (PCL)",*OCCCCCC(=O)*,0.14,140.0
+"Poly(lactic acid) (PLA)",*OC(C)C(=O)*,0.13,85.0
+"Poly(glycolic acid) (PGA)",*OCC(=O)*,0.15,70.0
+"Poly(3-hydroxybutyrate) (PHB)",*OC(C)CC(=O)*,0.16,100.0
+"Poly(3-hydroxyvalerate) (PHV)",*OC(CC)CC(=O)*,0.15,110.0
+"Poly(p-phenylene)",*c1ccccc1*,0.40,15.0
+"Poly(thiophene)",*c1ccsc1*,0.30,40.0
+"Poly(3-hexylthiophene) (P3HT)",*c1cc(CCCCCC)sc1*,0.25,90.0
+"Poly(3,4-ethylenedioxythiophene) (PEDOT)",*c1cc2OCCOc2s1*,0.35,30.0
+"Polypyrrole",*c1cc[nH]c1*,0.25,45.0
+"Polyaniline",*Nc1ccccc1*,0.20,50.0
+"Polyacetylene",*C=C*,0.38,40.0
+"Kevlar",*Nc1ccc(cc1)NC(=O)c1ccc(cc1)C(=O)*,0.04,5.0
+"Nomex",*Nc1cccc(c1)NC(=O)c1cccc(c1)C(=O)*,0.05,15.0
+"Twaron",*Nc1ccc(cc1)NC(=O)c1ccc(cc1)C(=O)*,0.04,6.0
+"Poly(p-phenylene benzobisoxazole) (PBO)",*c1cc2nc3cc(nc3oc2c1)*,0.50,2.0
+"Poly(ethylene glycol) (PEG)",*CCO*,0.20,130.0
+"Poly(propylene glycol) (PPG)",*CC(C)O*,0.18,140.0
+"Poly(tetramethylene ether glycol) (PTMEG)",*CCCCO*,0.19,135.0
+"Polyisoprene (Natural Rubber)",*CC(C)=CC*,0.14,220.0
+"Polybutadiene (cis)",*CC=CC*,0.15,200.0
+"Polybutadiene (trans)",*CC=CC*,0.16,180.0
+"Polychloroprene (Neoprene)",*CC(Cl)=CC*,0.18,180.0
+"Poly(isobutylene) (Butyl Rubber)",*CC(C)(C)C*,0.12,150.0
+"SBR (Styrene Butadiene Rubber)",*CC(c1ccccc1)CC=CC*,0.15,190.0
+"NBR (Nitrile Rubber)",*CC(C#N)CC=CC*,0.19,170.0
+"EPDM Rubber",*CC(C)CC(CC)CC=C*,0.14,160.0
+"Poly(norbornene)",*C1CC2CC1C=C2*,0.16,90.0
+"Parylene C",*CCc1cc(Cl)c(cc1)CC*,0.12,35.0
+"Parylene N",*CCc1ccccc1CC*,0.13,69.0
+"Poly(vinyl benzyl chloride)",*CC(c1ccc(CCl)cc1)*,0.15,65.0
+"Poly(acrylic acid)",*CC(C(=O)O)*,0.22,70.0
+"Poly(methacrylic acid)",*CC(C)(C(=O)O)*,0.21,65.0
+"Poly(acrylamide)",*CC(C(=O)N)*,0.25,60.0
+"Poly(N-isopropylacrylamide)",*CC(C(=O)NC(C)C)*,0.23,85.0
+"Poly(4-vinylpyridine)",*CC(c1ccncc1)*,0.18,75.0
+"Poly(2-vinylpyridine)",*CC(c1ncccc1)*,0.17,78.0
+"Cyclic Olefin Copolymer (COC)",*C1CC2CC1C2*,0.15,60.0
+"Poly(dicyclopentadiene)",*C1C2CC3CC1C23*,0.14,80.0
+"Poly(vinyl cinnamate)",*CC(OC(=O)C=Cc1ccccc1)*,0.16,95.0
+"Poly(vinyl stearate)",*CC(OC(=O)CCCCCCCCCCCCCCCCC)*,0.15,180.0
+"Poly(octadecyl methacrylate)",*CC(C)(C(=O)OCCCCCCCCCCCCCCCCCC)*,0.14,160.0
+"Poly(vinyl methyl ether)",*CC(OC)*,0.16,130.0
+"Poly(vinyl ethyl ether)",*CC(OCC)*,0.15,140.0
+"Poly(vinyl isobutyl ether)",*CC(OCC(C)C)*,0.14,145.0
